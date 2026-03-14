@@ -1,231 +1,465 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PRIX Entertainment — Nepal's Premier Creator Network & Influencer Marketing Agency</title>
-  <meta name="description" content="Connect your brand with Nepal's most influential YouTube creators. From strategy to execution — we deliver real results."/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black: #0f0f0f;
-      --dark: #111111;
-      --gold: #d4af37;
-      --gold-dark: #b8972e;
-      --red-nepal: #c8102e;
-      --gray: #1a1a1a;
-      --light: #f8f8f8;
-    }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--black);
-      color: white;
-      overflow-x: hidden;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    .glow-gold {
-      text-shadow: 0 0 40px rgba(212,175,55,0.4);
-    }
-    .neon-red {
-      text-shadow: 0 0 30px rgba(200,16,46,0.5);
-    }
-    .section-padding {
-      padding: 10rem 5vw;
-    }
-    @media (max-width: 768px) {
-      .section-padding { padding: 6rem 5vw; }
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>PRIX Entertainment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#0B0B0F;
+color:white;
+font-family:Inter;
+overflow-x:hidden;
+
+}
+
+/* NAV */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+
+}
+
+.logo{
+
+font-family:"Space Grotesk";
+font-size:22px;
+letter-spacing:3px;
+
+background:linear-gradient(90deg,#6D28FF,#00E5FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+nav a{
+
+color:#aaa;
+margin-left:30px;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:white;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+
+}
+
+.hero h1{
+
+font-family:"Space Grotesk";
+font-size:80px;
+letter-spacing:6px;
+
+background:linear-gradient(90deg,#6D28FF,#FF2FD8,#00E5FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+color:#9CA3AF;
+margin-top:20px;
+font-size:20px;
+
+}
+
+.cta{
+
+margin-top:40px;
+padding:16px 40px;
+border-radius:40px;
+
+background:linear-gradient(90deg,#6D28FF,#FF2FD8);
+
+border:none;
+color:white;
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cta:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 30px #6D28FF;
+
+}
+
+/* floating glow background */
+
+.glow{
+
+position:absolute;
+width:500px;
+height:500px;
+background:#6D28FF;
+filter:blur(200px);
+opacity:.4;
+animation:move 10s infinite alternate;
+
+}
+
+@keyframes move{
+
+from{transform:translate(-200px,-200px)}
+to{transform:translate(200px,200px)}
+
+}
+
+/* creators */
+
+.creators{
+
+padding:140px 10%;
+
+}
+
+.section-title{
+
+font-family:"Space Grotesk";
+font-size:42px;
+margin-bottom:60px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,0.03);
+border-radius:20px;
+overflow:hidden;
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 0 30px rgba(109,40,255,0.5);
+
+}
+
+.card img{
+
+width:100%;
+display:block;
+
+}
+
+.card h3{
+
+padding:16px;
+
+font-family:"Space Grotesk";
+
+}
+
+.stats{
+
+color:#9CA3AF;
+padding:0 16px 20px;
+
+}
+
+/* stats section */
+
+.stats-section{
+
+padding:140px 10%;
+text-align:center;
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:50px;
+margin-top:80px;
+
+}
+
+.number{
+
+font-size:60px;
+font-family:"Space Grotesk";
+
+background:linear-gradient(90deg,#6D28FF,#00E5FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.label{
+
+color:#9CA3AF;
+margin-top:10px;
+
+}
+
+/* CTA */
+
+.brand{
+
+padding:160px 10%;
+text-align:center;
+
+}
+
+.brand h2{
+
+font-family:"Space Grotesk";
+font-size:50px;
+
+}
+
+.brand p{
+
+color:#9CA3AF;
+margin-top:20px;
+
+}
+
+footer{
+
+padding:50px;
+text-align:center;
+color:#666;
+
+}
+
+</style>
 </head>
-<body class="antialiased">
 
-  <!-- Floating CTAs -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 md:bottom-10 md:right-10">
-    <a href="#brands" class="bg-gradient-to-r from-yellow-600 to-amber-500 text-black font-semibold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition transform duration-300 flex items-center gap-2">
-      <span>Book a Campaign</span>
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-    </a>
-    <a href="#creators" class="bg-gradient-to-r from-red-700 to-red-500 text-white font-semibold px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition transform duration-300 flex items-center gap-2">
-      <span>Join the Network</span>
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-    </a>
-  </div>
+<body>
 
-  <!-- Hero -->
-  <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black"></div>
-      <video autoplay muted loop playsinline class="object-cover w-full h-full opacity-40 scale-110">
-        <source src="https://cdn.coverr.co/videos/coverr-cinematic-aerial-shot-of-kathmandu-valley-1589276831573.mp4" type="video/mp4">
-      </video>
-    </div>
+<nav>
 
-    <div class="relative z-10 text-center px-6 max-w-5xl">
-      <h1 class="text-5xl md:text-8xl font-extrabold leading-tight glow-gold mb-6">
-        PRIX <span class="text-red-nepal neon-red">Entertainment</span>
-      </h1>
-      <p class="text-xl md:text-3xl font-light mb-10 max-w-3xl mx-auto leading-relaxed">
-        Nepal’s most powerful creator network.<br/>
-        Where brands meet authentic influence — and results speak louder than followers.
-      </p>
+<div class="logo">PRIX</div>
 
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="#brands" class="bg-gradient-to-r from-yellow-600 to-amber-500 hover:from-yellow-500 hover:to-amber-400 text-black font-bold text-lg px-10 py-6 rounded-full shadow-2xl transform hover:scale-105 transition duration-300">
-          Start a Campaign →
-        </a>
-        <a href="#creators" class="border-2 border-red-600 text-red-400 hover:bg-red-900/30 font-bold text-lg px-10 py-6 rounded-full transition duration-300">
-          Apply as Creator →
-        </a>
-      </div>
+<div>
 
-      <div class="mt-20 text-sm uppercase tracking-widest opacity-70">
-        Trusted by brands • 1M+ subscriber reach • Nepali-first influence
-      </div>
-    </div>
+<a href="#">Creators</a>
+<a href="#">Campaigns</a>
+<a href="#">Brands</a>
 
-    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-10 h-10 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-      </svg>
-    </div>
-  </header>
+</div>
 
-  <!-- Stats Bar -->
-  <section class="bg-gradient-to-r from-gray-900 to-black py-16">
-    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-      <div>
-        <div class="text-5xl font-bold text-amber-400">1M+</div>
-        <p class="text-gray-400 mt-2">Combined Subscribers</p>
-      </div>
-      <div>
-        <div class="text-5xl font-bold text-red-500">300K+</div>
-        <p class="text-gray-400 mt-2">Top Single-Channel Reach</p>
-      </div>
-      <div>
-        <div class="text-5xl font-bold text-amber-400">50+</div>
-        <p class="text-gray-400 mt-2">Campaigns Delivered</p>
-      </div>
-      <div>
-        <div class="text-5xl font-bold text-red-500">Nepal</div>
-        <p class="text-gray-400 mt-2">Local-first • Global ambition</p>
-      </div>
-    </div>
-  </section>
+</nav>
 
-  <!-- For Brands -->
-  <section id="brands" class="section-padding bg-black">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-6xl md:text-8xl font-extrabold text-center mb-20">
-        Brands deserve <span class="text-amber-400">real influence</span>
-      </h2>
+<section class="hero">
 
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <ul class="space-y-8 text-xl">
-            <li class="flex items-start gap-6">
-              <span class="text-4xl text-amber-500">01</span>
-              <div>
-                <h4 class="font-bold text-2xl mb-2">Hyper-local precision</h4>
-                <p class="text-gray-400">Nepali-language creators who actually move Nepali audiences.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-6">
-              <span class="text-4xl text-amber-500">02</span>
-              <div>
-                <h4 class="font-bold text-2xl mb-2">Full-service execution</h4>
-                <p class="text-gray-400">Strategy → casting → negotiation → delivery → reporting.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-6">
-              <span class="text-4xl text-amber-500">03</span>
-              <div>
-                <h4 class="font-bold text-2xl mb-2">$500 – $10K campaigns</h4>
-                <p class="text-gray-400">Flexible budgets. Serious ROI.</p>
-              </div>
-            </li>
-          </ul>
+<div class="glow"></div>
 
-          <a href="mailto:hello@prixent.com?subject=Campaign%20Inquiry" class="mt-12 inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold text-xl px-12 py-6 rounded-full shadow-xl transform hover:scale-105 transition">
-            Talk to us →
-          </a>
-        </div>
+<h1>PRIX</h1>
 
-        <div class="relative">
-          <div class="aspect-video rounded-2xl overflow-hidden border-4 border-amber-500/30 shadow-2xl">
-            <!-- You can replace with real campaign highlight reel later -->
-            <div class="w-full h-full bg-gradient-to-br from-red-900 via-black to-amber-900 flex items-center justify-center text-2xl font-bold">
-              Campaign Reel Placeholder
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<p>Influence Engine for Nepal</p>
 
-  <!-- For Creators -->
-  <section id="creators" class="section-padding bg-gradient-to-b from-black to-gray-900">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-6xl md:text-8xl font-extrabold mb-10">
-        Level up your <span class="text-red-500">career</span>
-      </h2>
-      <p class="text-2xl text-gray-300 mb-16 max-w-3xl mx-auto">
-        Get better deals, bigger campaigns, professional management — without losing creative control.
-      </p>
+<button class="cta">Explore Creators</button>
 
-      <div class="grid md:grid-cols-3 gap-10 mb-16">
-        <div class="bg-gray-900/60 backdrop-blur border border-gray-700 p-10 rounded-2xl">
-          <div class="text-5xl mb-6">💰</div>
-          <h4 class="text-2xl font-bold mb-4">Higher Rates</h4>
-          <p class="text-gray-400">We negotiate harder than you ever could.</p>
-        </div>
-        <div class="bg-gray-900/60 backdrop-blur border border-gray-700 p-10 rounded-2xl">
-          <div class="text-5xl mb-6">📈</div>
-          <h4 class="text-2xl font-bold mb-4">Premium Brands</h4>
-          <p class="text-gray-400">Access to international & local advertisers.</p>
-        </div>
-        <div class="bg-gray-900/60 backdrop-blur border border-gray-700 p-10 rounded-2xl">
-          <div class="text-5xl mb-6">🛡️</div>
-          <h4 class="text-2xl font-bold mb-4">Full Protection</h4>
-          <p class="text-gray-400">Contracts, payments, legal — handled.</p>
-        </div>
-      </div>
+</section>
 
-      <a href="https://forms.gle/your-application-form" target="_blank" class="inline-block bg-red-700 hover:bg-red-600 text-white font-bold text-xl px-16 py-8 rounded-full shadow-2xl transform hover:scale-105 transition duration-300">
-        Apply to Join PRIX →
-      </a>
-    </div>
-  </section>
+<section class="creators">
 
-  <!-- Footer -->
-  <footer class="bg-black border-t border-gray-800 py-20 text-center text-gray-500">
-    <p class="text-lg mb-4">PRIX Entertainment — Kathmandu, Nepal</p>
-    <p class="text-sm">© 2026 PRIX Entertainment Pvt. Ltd. • hello@prixent.com</p>
-  </footer>
+<h2 class="section-title">Featured Creators</h2>
 
-  <script>
-    // Simple GSAP intro animation
-    gsap.from("h1", { y: 120, opacity: 0, duration: 1.4, ease: "power4.out" });
-    gsap.from("header p", { y: 80, opacity: 0, duration: 1.2, delay: 0.4, ease: "power3.out" });
-    gsap.from("header a", { scale: 0.8, opacity: 0, duration: 1, delay: 0.8, stagger: 0.2, ease: "back.out(1.7)" });
+<div class="grid">
 
-    // Parallax feel on scroll for video background (subtle)
-    gsap.to("video", {
-      yPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "header",
-        scrub: true,
-        start: "top top",
-        end: "bottom top"
-      }
-    });
-  </script>
+<div class="card">
+
+<img src="https://picsum.photos/400/300?1">
+
+<h3>Creator One</h3>
+
+<div class="stats">1.2M Subscribers</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/300?2">
+
+<h3>Creator Two</h3>
+
+<div class="stats">820K Subscribers</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/300?3">
+
+<h3>Creator Three</h3>
+
+<div class="stats">540K Subscribers</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/300?4">
+
+<h3>Creator Four</h3>
+
+<div class="stats">320K Subscribers</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats-section">
+
+<h2 class="section-title">Campaign Impact</h2>
+
+<div class="stats-grid">
+
+<div>
+
+<div class="number" data-target="12">0</div>
+<div class="label">Million Reach</div>
+
+</div>
+
+<div>
+
+<div class="number" data-target="60">0</div>
+<div class="label">Creators Network</div>
+
+</div>
+
+<div>
+
+<div class="number" data-target="45">0</div>
+<div class="label">Brand Campaigns</div>
+
+</div>
+
+<div>
+
+<div class="number" data-target="300">0</div>
+<div class="label">Million Views</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="brand">
+
+<h2>Launch Your Campaign</h2>
+
+<p>Connect with Nepal's top creators and reach millions</p>
+
+<button class="cta">Start a Campaign</button>
+
+</section>
+
+<footer>
+
+PRIX Entertainment © 2026
+
+</footer>
+
+<script>
+
+/* number animation */
+
+const counters=document.querySelectorAll(".number")
+
+counters.forEach(counter=>{
+
+counter.innerText="0"
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target")
+
+const current=+counter.innerText
+
+const increment=target/80
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+increment)
+
+setTimeout(update,30)
+
+}
+
+else{
+
+counter.innerText=target
+
+}
+
+}
+
+update()
+
+})
+
+</script>
+
 </body>
 </html>
