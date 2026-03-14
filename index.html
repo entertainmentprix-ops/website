@@ -1,465 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>PRIX Entertainment</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-background:#0B0B0F;
-color:white;
-font-family:Inter;
-overflow-x:hidden;
-
-}
-
-/* NAV */
-
-nav{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:25px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:10;
-
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
-
-}
-
-.logo{
-
-font-family:"Space Grotesk";
-font-size:22px;
-letter-spacing:3px;
-
-background:linear-gradient(90deg,#6D28FF,#00E5FF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-}
-
-nav a{
-
-color:#aaa;
-margin-left:30px;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:white;
-
-}
-
-/* HERO */
-
-.hero{
-
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-text-align:center;
-position:relative;
-
-}
-
-.hero h1{
-
-font-family:"Space Grotesk";
-font-size:80px;
-letter-spacing:6px;
-
-background:linear-gradient(90deg,#6D28FF,#FF2FD8,#00E5FF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-}
-
-.hero p{
-
-color:#9CA3AF;
-margin-top:20px;
-font-size:20px;
-
-}
-
-.cta{
-
-margin-top:40px;
-padding:16px 40px;
-border-radius:40px;
-
-background:linear-gradient(90deg,#6D28FF,#FF2FD8);
-
-border:none;
-color:white;
-font-size:16px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.cta:hover{
-
-transform:scale(1.1);
-box-shadow:0 0 30px #6D28FF;
-
-}
-
-/* floating glow background */
-
-.glow{
-
-position:absolute;
-width:500px;
-height:500px;
-background:#6D28FF;
-filter:blur(200px);
-opacity:.4;
-animation:move 10s infinite alternate;
-
-}
-
-@keyframes move{
-
-from{transform:translate(-200px,-200px)}
-to{transform:translate(200px,200px)}
-
-}
-
-/* creators */
-
-.creators{
-
-padding:140px 10%;
-
-}
-
-.section-title{
-
-font-family:"Space Grotesk";
-font-size:42px;
-margin-bottom:60px;
-
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
-
-}
-
-.card{
-
-background:rgba(255,255,255,0.03);
-border-radius:20px;
-overflow:hidden;
-
-backdrop-filter:blur(20px);
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-12px) scale(1.02);
-box-shadow:0 0 30px rgba(109,40,255,0.5);
-
-}
-
-.card img{
-
-width:100%;
-display:block;
-
-}
-
-.card h3{
-
-padding:16px;
-
-font-family:"Space Grotesk";
-
-}
-
-.stats{
-
-color:#9CA3AF;
-padding:0 16px 20px;
-
-}
-
-/* stats section */
-
-.stats-section{
-
-padding:140px 10%;
-text-align:center;
-
-}
-
-.stats-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:50px;
-margin-top:80px;
-
-}
-
-.number{
-
-font-size:60px;
-font-family:"Space Grotesk";
-
-background:linear-gradient(90deg,#6D28FF,#00E5FF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-}
-
-.label{
-
-color:#9CA3AF;
-margin-top:10px;
-
-}
-
-/* CTA */
-
-.brand{
-
-padding:160px 10%;
-text-align:center;
-
-}
-
-.brand h2{
-
-font-family:"Space Grotesk";
-font-size:50px;
-
-}
-
-.brand p{
-
-color:#9CA3AF;
-margin-top:20px;
-
-}
-
-footer{
-
-padding:50px;
-text-align:center;
-color:#666;
-
-}
-
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prixent</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+<header class="nav">
 
-<div class="logo">PRIX</div>
-
-<div>
-
-<a href="#">Creators</a>
-<a href="#">Campaigns</a>
-<a href="#">Brands</a>
-
+<div class="logo">
+<img src="images/logo.png">
 </div>
 
+<nav>
+<a href="index.html">Home</a>
+<a href="creators.html">Creators</a>
+<a href="brands.html">Brands</a>
+<a href="contact.html">Contact</a>
 </nav>
+
+</header>
 
 <section class="hero">
 
-<div class="glow"></div>
+<h1>Connecting Brands With Nepal's Top Creators</h1>
 
-<h1>PRIX</h1>
+<p>500+ Creators • 30M+ Reach • Campaigns Across Nepal</p>
 
-<p>Influence Engine for Nepal</p>
+<a class="cta" href="contact.html">Book a Meeting</a>
 
-<button class="cta">Explore Creators</button>
+</section>
+
+<section class="brands">
+
+<h2>Brands We Work With</h2>
+
+<div class="brand-grid">
+
+<img src="images/brand1.png">
+<img src="images/brand2.png">
+<img src="images/brand3.png">
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Creators</p>
+</div>
+
+<div class="stat">
+<h2>30M+</h2>
+<p>Total Reach</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Campaigns</p>
+</div>
 
 </section>
 
 <section class="creators">
 
-<h2 class="section-title">Featured Creators</h2>
+<h2>Featured Creators</h2>
 
-<div class="grid">
+<div class="creator-grid">
 
-<div class="card">
-
-<img src="https://picsum.photos/400/300?1">
-
-<h3>Creator One</h3>
-
-<div class="stats">1.2M Subscribers</div>
-
+<div class="creator">
+<img src="images/creator1.png">
+<p>Creator Name</p>
 </div>
 
-<div class="card">
-
-<img src="https://picsum.photos/400/300?2">
-
-<h3>Creator Two</h3>
-
-<div class="stats">820K Subscribers</div>
-
+<div class="creator">
+<img src="images/creator2.png">
+<p>Creator Name</p>
 </div>
 
-<div class="card">
-
-<img src="https://picsum.photos/400/300?3">
-
-<h3>Creator Three</h3>
-
-<div class="stats">540K Subscribers</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/400/300?4">
-
-<h3>Creator Four</h3>
-
-<div class="stats">320K Subscribers</div>
-
+<div class="creator">
+<img src="images/creator3.png">
+<p>Creator Name</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="stats-section">
+<section class="case">
 
-<h2 class="section-title">Campaign Impact</h2>
+<h2>Case Studies</h2>
 
-<div class="stats-grid">
+<div class="case-grid">
 
-<div>
-
-<div class="number" data-target="12">0</div>
-<div class="label">Million Reach</div>
-
+<div class="case-card">
+<img src="images/case1.png">
+<h3>Brand Campaign</h3>
+<p>2M views campaign with creators.</p>
 </div>
 
-<div>
-
-<div class="number" data-target="60">0</div>
-<div class="label">Creators Network</div>
-
-</div>
-
-<div>
-
-<div class="number" data-target="45">0</div>
-<div class="label">Brand Campaigns</div>
-
-</div>
-
-<div>
-
-<div class="number" data-target="300">0</div>
-<div class="label">Million Views</div>
-
+<div class="case-card">
+<img src="images/case2.png">
+<h3>Product Launch</h3>
+<p>Influencer launch across TikTok.</p>
 </div>
 
 </div>
-
-</section>
-
-<section class="brand">
-
-<h2>Launch Your Campaign</h2>
-
-<p>Connect with Nepal's top creators and reach millions</p>
-
-<button class="cta">Start a Campaign</button>
 
 </section>
 
 <footer>
 
-PRIX Entertainment © 2026
+<p>© Prixent</p>
 
 </footer>
-
-<script>
-
-/* number animation */
-
-const counters=document.querySelectorAll(".number")
-
-counters.forEach(counter=>{
-
-counter.innerText="0"
-
-const update=()=>{
-
-const target=+counter.getAttribute("data-target")
-
-const current=+counter.innerText
-
-const increment=target/80
-
-if(current<target){
-
-counter.innerText=Math.ceil(current+increment)
-
-setTimeout(update,30)
-
-}
-
-else{
-
-counter.innerText=target
-
-}
-
-}
-
-update()
-
-})
-
-</script>
 
 </body>
 </html>
