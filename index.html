@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>PRIX Entertainment</title>
 
@@ -12,67 +11,49 @@
 
 <style>
 
-/* RESET */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-
 font-family:Inter;
 background:#0A0A0F;
 color:white;
 overflow-x:hidden;
-
 }
 
 /* NAV */
 
 nav{
-
 position:fixed;
 top:0;
 width:100%;
-padding:25px 80px;
-
+padding:22px 70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-
-background:rgba(0,0,0,0.35);
+background:rgba(0,0,0,.45);
 backdrop-filter:blur(10px);
-
-z-index:10;
-
+z-index:100;
 }
 
 .logo{
-
 font-family:"Space Grotesk";
 font-size:22px;
 letter-spacing:4px;
-
 background:linear-gradient(90deg,#6D28FF,#00E5FF);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 }
 
 nav a{
-
 color:#aaa;
 text-decoration:none;
 margin-left:35px;
 font-size:14px;
 transition:.3s;
-
 }
 
 nav a:hover{
@@ -82,249 +63,191 @@ color:white;
 /* HERO */
 
 .hero{
-
 height:100vh;
-
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-
 text-align:center;
-
 padding:0 20px;
-
 }
 
 .hero h1{
-
 font-family:"Space Grotesk";
-font-size:110px;
+font-size:100px;
 letter-spacing:8px;
-
 background:linear-gradient(90deg,#6D28FF,#FF2FD8,#00E5FF);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 }
 
 .hero p{
-
-margin-top:25px;
+margin-top:20px;
 color:#9CA3AF;
 font-size:20px;
-
+max-width:700px;
 }
 
-.cta{
-
+.btn{
 margin-top:40px;
-
-padding:16px 45px;
-
+padding:15px 40px;
 border-radius:40px;
-
 border:none;
-
 background:linear-gradient(90deg,#6D28FF,#FF2FD8);
-
 color:white;
-
 font-size:16px;
-
 cursor:pointer;
-
 transition:.3s;
-
 }
 
-.cta:hover{
-
+.btn:hover{
 transform:scale(1.08);
-box-shadow:0 0 35px #6D28FF;
-
+box-shadow:0 0 30px #6D28FF;
 }
 
 /* SECTION */
 
 section{
-
 padding:140px 10%;
-
 }
 
 /* TITLES */
 
 .title{
-
 font-family:"Space Grotesk";
 font-size:42px;
-margin-bottom:70px;
-
+margin-bottom:60px;
+text-align:center;
 }
 
 /* FEATURES */
 
 .features{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:40px;
-
 }
 
 .feature{
-
 background:rgba(255,255,255,0.03);
-
 padding:40px;
-
 border-radius:18px;
-
 transition:.3s;
-
 }
 
 .feature:hover{
-
 transform:translateY(-10px);
-
-box-shadow:0 0 25px rgba(109,40,255,0.4);
-
+box-shadow:0 0 25px rgba(109,40,255,.4);
 }
 
 .feature h3{
-
 font-family:"Space Grotesk";
-margin-bottom:10px;
-
+margin-bottom:12px;
 }
 
 .feature p{
-
 color:#9CA3AF;
-
 }
 
-/* CREATOR GRID */
+/* TALENT */
 
 .creators{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:35px;
-
 }
 
 .card{
-
-background:rgba(255,255,255,0.03);
-
+background:rgba(255,255,255,.03);
 border-radius:18px;
-
 overflow:hidden;
-
 transition:.3s;
-
 }
 
 .card:hover{
-
 transform:translateY(-10px);
-
 box-shadow:0 0 25px rgba(109,40,255,.5);
-
 }
 
 .card img{
-
 width:100%;
 height:180px;
 object-fit:cover;
-
 }
 
 .card h4{
-
 padding:16px;
 font-family:"Space Grotesk";
-
 }
 
 .card p{
-
 padding:0 16px 20px;
 color:#9CA3AF;
-
 }
 
 /* STATS */
 
 .stats{
-
 text-align:center;
-
 }
 
 .stats-grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:50px;
 margin-top:80px;
-
 }
 
 .number{
-
 font-size:60px;
-
 font-family:"Space Grotesk";
-
 background:linear-gradient(90deg,#6D28FF,#00E5FF);
-
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-
 }
 
 .label{
-
 color:#9CA3AF;
 margin-top:10px;
-
 }
 
-/* CTA SECTION */
+/* BRANDS */
+
+.brands{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:60px;
+opacity:.6;
+}
+
+.brands img{
+height:40px;
+filter:grayscale(100%);
+}
+
+/* CTA */
 
 .cta-section{
-
 text-align:center;
-
 }
 
 .cta-section h2{
-
 font-family:"Space Grotesk";
-font-size:50px;
-
+font-size:48px;
 }
 
 .cta-section p{
-
-margin-top:20px;
 color:#9CA3AF;
-
+margin-top:20px;
 }
 
 /* FOOTER */
 
 footer{
-
 padding:60px;
 text-align:center;
 color:#666;
-
 }
 
 /* MOBILE */
@@ -332,7 +255,7 @@ color:#666;
 @media(max-width:768px){
 
 .hero h1{
-font-size:64px;
+font-size:60px;
 }
 
 nav{
@@ -342,21 +265,17 @@ padding:20px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
 <div class="logo">PRIX</div>
 
 <div>
-
 <a href="#about">About</a>
-<a href="#creators">Creators</a>
+<a href="#talent">Creators</a>
 <a href="#results">Results</a>
-
 </div>
 
 </nav>
@@ -367,9 +286,9 @@ padding:20px;
 
 <h1>PRIX</h1>
 
-<p>Influence Engine for Nepal</p>
+<p>Connecting brands with Nepal's most influential digital creators.</p>
 
-<button class="cta" onclick="scrollToSection('about')">Explore</button>
+<button class="btn">Start a Campaign</button>
 
 </section>
 
@@ -377,77 +296,59 @@ padding:20px;
 
 <section id="about">
 
-<h2 class="title">What PRIX Does</h2>
+<h2 class="title">Influencer Marketing Made Simple</h2>
 
 <div class="features">
 
 <div class="feature">
-
 <h3>Creator Network</h3>
-<p>Access top Nepali creators across YouTube, gaming, lifestyle and entertainment.</p>
-
+<p>Access YouTube creators across comedy, gaming, lifestyle and tech.</p>
 </div>
 
 <div class="feature">
-
 <h3>Campaign Strategy</h3>
-<p>We design influencer campaigns that reach millions of Nepali viewers.</p>
-
+<p>We design campaigns that reach millions of Nepali viewers.</p>
 </div>
 
 <div class="feature">
-
 <h3>Brand Partnerships</h3>
-<p>PRIX connects brands with the right creators for authentic marketing.</p>
-
+<p>PRIX manages deals, negotiations and creator collaborations.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CREATORS -->
+<!-- TALENT -->
 
-<section id="creators">
+<section id="talent">
 
-<h2 class="title">Featured Creators</h2>
+<h2 class="title">Exclusive Talent</h2>
 
 <div class="creators">
 
 <div class="card">
-
 <img src="https://picsum.photos/400/300?1">
-
 <h4>Comedy Creator</h4>
 <p>1.2M Subscribers</p>
-
 </div>
 
 <div class="card">
-
 <img src="https://picsum.photos/400/300?2">
-
-<h4>Lifestyle Creator</h4>
-<p>820K Subscribers</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/400/300?3">
-
 <h4>Gaming Creator</h4>
-<p>540K Subscribers</p>
-
+<p>900K Subscribers</p>
 </div>
 
 <div class="card">
+<img src="https://picsum.photos/400/300?3">
+<h4>Lifestyle Creator</h4>
+<p>600K Subscribers</p>
+</div>
 
+<div class="card">
 <img src="https://picsum.photos/400/300?4">
-
 <h4>Tech Creator</h4>
 <p>320K Subscribers</p>
-
 </div>
 
 </div>
@@ -463,31 +364,23 @@ padding:20px;
 <div class="stats-grid">
 
 <div>
-
 <div class="number" data-target="12">0</div>
 <div class="label">Million Reach</div>
-
 </div>
 
 <div>
-
 <div class="number" data-target="60">0</div>
 <div class="label">Creators</div>
-
 </div>
 
 <div>
-
 <div class="number" data-target="45">0</div>
 <div class="label">Campaigns</div>
-
 </div>
 
 <div>
-
 <div class="number" data-target="300">0</div>
 <div class="label">Million Views</div>
-
 </div>
 
 </div>
@@ -498,11 +391,11 @@ padding:20px;
 
 <section class="cta-section">
 
-<h2>Start Your Campaign</h2>
+<h2>Launch Your Influencer Campaign</h2>
 
-<p>Connect with Nepal’s fastest growing creator network.</p>
+<p>Partner with Nepal's fastest growing creator network.</p>
 
-<button class="cta">Book a Meeting</button>
+<button class="btn">Book a Meeting</button>
 
 </section>
 
@@ -514,27 +407,15 @@ PRIX Entertainment © 2026
 
 <script>
 
-/* smooth scroll */
-
-function scrollToSection(id){
-
-document.getElementById(id).scrollIntoView({
-behavior:"smooth"
-})
-
-}
-
-/* count animation */
+/* number animation */
 
 const counters=document.querySelectorAll(".number")
 
 counters.forEach(counter=>{
 
-const target=+counter.dataset.target
-
+let target=+counter.dataset.target
 let count=0
-
-const step=target/80
+let step=target/80
 
 function update(){
 
