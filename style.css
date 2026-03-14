@@ -1,0 +1,117 @@
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.logo img{
+height:40px;
+}
+
+nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.cta{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:white;
+color:black;
+text-decoration:none;
+}
+
+.brands{
+text-align:center;
+padding:80px 20px;
+}
+
+.brand-grid{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.brand-grid img{
+height:50px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:80px;
+padding:80px 20px;
+text-align:center;
+}
+
+.creators{
+text-align:center;
+padding:80px 20px;
+}
+
+.creator-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.creator img{
+width:120px;
+height:120px;
+border-radius:100px;
+}
+
+.case{
+padding:80px 20px;
+text-align:center;
+}
+
+.case-grid{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.case-card{
+max-width:300px;
+}
+
+.case-card img{
+width:100%;
+}
+
+footer{
+text-align:center;
+padding:40px;
+opacity:0.6;
+}
+
+.page{
+padding:120px 40px;
+text-align:center;
+}
