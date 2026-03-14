@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -30,22 +30,17 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-padding:22px 70px;
+padding:24px 70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.45);
+background:rgba(0,0,0,.4);
 backdrop-filter:blur(10px);
 z-index:100;
 }
 
-.logo{
-font-family:"Space Grotesk";
-font-size:22px;
-letter-spacing:4px;
-background:linear-gradient(90deg,#6D28FF,#00E5FF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.logo img{
+height:42px;
 }
 
 nav a{
@@ -74,8 +69,9 @@ padding:0 20px;
 
 .hero h1{
 font-family:"Space Grotesk";
-font-size:100px;
-letter-spacing:8px;
+font-size:95px;
+letter-spacing:6px;
+
 background:linear-gradient(90deg,#6D28FF,#FF2FD8,#00E5FF);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -89,7 +85,7 @@ max-width:700px;
 }
 
 .btn{
-margin-top:40px;
+margin-top:35px;
 padding:15px 40px;
 border-radius:40px;
 border:none;
@@ -101,7 +97,7 @@ transition:.3s;
 }
 
 .btn:hover{
-transform:scale(1.08);
+transform:scale(1.07);
 box-shadow:0 0 30px #6D28FF;
 }
 
@@ -111,7 +107,7 @@ section{
 padding:140px 10%;
 }
 
-/* TITLES */
+/* TITLE */
 
 .title{
 font-family:"Space Grotesk";
@@ -129,7 +125,7 @@ gap:40px;
 }
 
 .feature{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,.03);
 padding:40px;
 border-radius:18px;
 transition:.3s;
@@ -142,18 +138,18 @@ box-shadow:0 0 25px rgba(109,40,255,.4);
 
 .feature h3{
 font-family:"Space Grotesk";
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .feature p{
 color:#9CA3AF;
 }
 
-/* TALENT */
+/* CREATORS */
 
 .creators{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:35px;
 }
 
@@ -185,17 +181,29 @@ padding:0 16px 20px;
 color:#9CA3AF;
 }
 
-/* STATS */
+/* BRAND LOGOS */
 
-.stats{
-text-align:center;
+.brand-logos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:50px;
+opacity:.6;
 }
+
+.brand-logos img{
+height:40px;
+filter:grayscale(100%);
+}
+
+/* STATS */
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:50px;
 margin-top:80px;
+text-align:center;
 }
 
 .number{
@@ -211,21 +219,6 @@ color:#9CA3AF;
 margin-top:10px;
 }
 
-/* BRANDS */
-
-.brands{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:60px;
-opacity:.6;
-}
-
-.brands img{
-height:40px;
-filter:grayscale(100%);
-}
-
 /* CTA */
 
 .cta-section{
@@ -238,8 +231,8 @@ font-size:48px;
 }
 
 .cta-section p{
-color:#9CA3AF;
 margin-top:20px;
+color:#9CA3AF;
 }
 
 /* FOOTER */
@@ -255,7 +248,7 @@ color:#666;
 @media(max-width:768px){
 
 .hero h1{
-font-size:60px;
+font-size:58px;
 }
 
 nav{
@@ -270,11 +263,14 @@ padding:20px;
 <body>
 
 <nav>
-<div class="logo">PRIX</div>
+
+<div class="logo">
+<img src="logo.png" alt="PRIX">
+</div>
 
 <div>
 <a href="#about">About</a>
-<a href="#talent">Creators</a>
+<a href="#creators">Creators</a>
 <a href="#results">Results</a>
 </div>
 
@@ -296,34 +292,34 @@ padding:20px;
 
 <section id="about">
 
-<h2 class="title">Influencer Marketing Made Simple</h2>
+<h2 class="title">Influencer Marketing Network</h2>
 
 <div class="features">
 
 <div class="feature">
 <h3>Creator Network</h3>
-<p>Access YouTube creators across comedy, gaming, lifestyle and tech.</p>
+<p>Work with YouTube creators across entertainment, gaming and lifestyle.</p>
 </div>
 
 <div class="feature">
 <h3>Campaign Strategy</h3>
-<p>We design campaigns that reach millions of Nepali viewers.</p>
+<p>We design influencer campaigns that reach millions of Nepali viewers.</p>
 </div>
 
 <div class="feature">
 <h3>Brand Partnerships</h3>
-<p>PRIX manages deals, negotiations and creator collaborations.</p>
+<p>PRIX manages creator collaborations and brand partnerships.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- TALENT -->
+<!-- CREATORS -->
 
-<section id="talent">
+<section id="creators">
 
-<h2 class="title">Exclusive Talent</h2>
+<h2 class="title">Top Creators</h2>
 
 <div class="creators">
 
@@ -355,11 +351,28 @@ padding:20px;
 
 </section>
 
+<!-- BRANDS -->
+
+<section>
+
+<h2 class="title">Brands We've Worked With</h2>
+
+<div class="brand-logos">
+
+<img src="https://dummyimage.com/120x40/fff/000.png&text=Brand+1">
+<img src="https://dummyimage.com/120x40/fff/000.png&text=Brand+2">
+<img src="https://dummyimage.com/120x40/fff/000.png&text=Brand+3">
+<img src="https://dummyimage.com/120x40/fff/000.png&text=Brand+4">
+
+</div>
+
+</section>
+
 <!-- RESULTS -->
 
-<section id="results" class="stats">
+<section id="results">
 
-<h2 class="title">Campaign Results</h2>
+<h2 class="title">Campaign Impact</h2>
 
 <div class="stats-grid">
 
@@ -391,7 +404,7 @@ padding:20px;
 
 <section class="cta-section">
 
-<h2>Launch Your Influencer Campaign</h2>
+<h2>Launch Your Campaign</h2>
 
 <p>Partner with Nepal's fastest growing creator network.</p>
 
@@ -407,7 +420,7 @@ PRIX Entertainment © 2026
 
 <script>
 
-/* number animation */
+/* stats animation */
 
 const counters=document.querySelectorAll(".number")
 
@@ -422,14 +435,10 @@ function update(){
 count+=step
 
 if(count<target){
-
 counter.innerText=Math.floor(count)
 requestAnimationFrame(update)
-
 }else{
-
 counter.innerText=target
-
 }
 
 }
